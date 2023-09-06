@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{graphics}
+\begin{document}
+
+\section{Introduction to path planning}
+Path planning is the problem of finding a collision-free path from a start state to a goal state in a robot's environment. It is a fundamental problem in robotics, and it is used in a wide variety of applications, such as navigation, manipulation, and obstacle avoidance.
+Path planning is an active area of research, and there are many new algorithms being developed all the time. The goal of path planning research is to develop algorithms that are efficient, accurate, and robust to changes in the environment.
+\section{Types of path planning}
+\begin{enumerate}
+\item local planning
+it finds a path from the robot's current state to a nearby goal state, without considering the entire environment. It is used in applications where the robot needs to plan a short-distance path, such as avoiding an obstacle
+\item global planning
+it finds a path from the start state to the goal state, taking into account the entire environment. It is used in applications where the robot needs to plan a long-distance path, such as navigating from one room to another.
+\item Dijkstra's algorithm
+This algorithm finds the shortest path between two points in a graph. It is a simple and efficient algorithm, but it can be slow for large graphs.
+\item RRT
+This algorithm is a sampling-based algorithm. It works by randomly sampling points in the environment and then connecting them to form a path. It is a very efficient algorithm, but it can be less accurate than other approaches.
+\item Probabilistic roadmaps
+This algorithm is a sampling-based algorithm that builds a roadmap of the environment. It then finds a path by connecting points on the roadmap. It is a more accurate approach than RRT, but it can be more computationally expensive.
+\item Visibility graph
+This algorithm builds a graph of the environment, where each node represents a point in the environment that is visible from the robot. It then finds a path by finding the shortest path between the start state and the goal state in the graph.
+\end{enumerate}
+\subsection{Local planner vs Global planning}
+\begin{table}[ht]
+
+
+\scalebox{0.5}{
+\begin{tabular}{|l|c|c|}
+\hline
+Feature & Global path planning & Local path planning \\ \hline
+Applications & Long-distance path planning, such as navigating from one room to another. & Short-distance path planning, such as avoiding an obstacle. \\ \hline
+Complexity & More complex & Less complex \\ \hline
+Accuracy & Less accurate & More accurate \\ \hline
+Efficiency & Less efficient & More efficient \\ \hline
+
+comparison of global path planning and local path planning\\
+\end{tabular}}
+\end{table}
+
+
+
+\section{challenges and future works}
+\begin{itemize}
+\item Dynamic environments:
+ Path planning algorithms are typically designed for static environments, but many real-world environments are dynamic, meaning that they can change over time. This can make it difficult for path planning algorithms to find a path that avoids obstacles that are moving or that are not known in advance.
+\item Uncertainty:
+The environment can be uncertain, meaning that the robot may not have a complete map of the environment. This can make it difficult for path planning algorithms to find a path that is guaranteed to be collision-free.
+\item Real-time constraints:
+Path planning algorithms need to be able to find a path in real time, meaning that they need to be efficient. This can be a challenge, especially for complex environments or for problems with high-dimensional state spaces.
+\item Multi-agent path planning: 
+Path planning algorithms are typically designed for single-agent systems, but many real-world problems involve multiple agents that need to cooperate to reach their goals. This can make path planning more challenging, as the algorithms need to consider the interactions between the agents.
+\item Computational complexity: 
+Path planning algorithms can be computationally expensive, especially for complex problems. This can make it difficult to use path planning algorithms in real-time or for problems with large state spaces.
+\end{itemize}
+
+\section{practical applications}
+\begin{enumerate}
+\item Carnegie Mellon Snake Robot Used in Search for Mexico Quake Survivors
+\item The HERB robot from Carnegie Mellon University's Personal Robotics Lab picking up a bottle.
+\item A PR2 robot folding laundry in UC Berkeley's Robotics Learning Lab. 
+\end{enumerate}
+\section{conclusion}
+\begin{itemize}
+\item Path planning is a critical component of robotics.
+\item There are many different approaches to path planning, each with its own advantages and disadvantages.
+\item The best approach to use depends on the specific application.
+\end{itemize}
+\section{resources}
+
+
+\end{document}
